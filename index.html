@@ -1,0 +1,62 @@
+<!doctype html>
+<html lang="en" ng-app="phonecatApp">
+<head>
+  <meta charset="utf-8">
+  <title>My HTML File</title>
+  <link rel="stylesheet" href="bower_components/bootstrap/dist/css/bootstrap.css">
+  <link rel="stylesheet" href="css/app.css">
+  <script src="bower_components/angular/angular.js"></script>
+  <script src="js/controllers.js"></script>
+</head>
+<body ng-controller="PhoneListCtrl">
+
+  <div class="container">
+    <h1>{{title}}</h1>
+    <input type="text" ng-model="query">
+    <ul>
+      <li ng-repeat="phone in phones">
+        <span>{{phone.name}}</span>
+        <p>
+          {{phone.snippet}}<br/>
+          Status: {{phone.status}}<br/>
+          Priority: {{phone.priority}}
+        </p>
+      </li>
+    </ul>
+    <p>Общее кол-во телефонов: {{ phones.length }}</p>
+
+    <hr>
+    
+    <ul>
+      <li>1. Currency: {{234 | currency}}</li>
+      <li>2. Date: {{12312312311 | date:'dd.MM.yyyy'}}</li>
+      <li>3. Number: {{1234.1 | number:3}}</li>
+      <li>4. Lowercase: {{'My Very Long String' | lowercase}}</li>
+      <li>5. Uppercase: {{'My Very Long String' | uppercase}}</li>
+      <li>6. Json: <pre>{{ {'text':'text', 'text2':'text text'} | json }}</pre></li>
+    </ul>
+
+    <hr>
+
+    <table>
+      <thead>
+        <tr>
+          <th>
+            <a href="" ng-click="sort('name')">
+              Name
+              <i class="glyphicon" ng-class="{'glyphicon-chevron-up' : isSortUp('name'),
+                                          'glyphicon-chevron-down' : isSortDown('name')}"></i>
+            </a></th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr ng-repeat="phone in phones | orderBy:sortField:reverse">
+          <td>{{phone.name}}</td>
+        </tr>
+      </tbody>
+    </table>
+
+  </div>
+
+</body>
+</html>
