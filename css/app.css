@@ -18,6 +18,30 @@ footer {
   text-shadow: 0 1px 3px rgba(255,255,255,.8);
   color: rgba(0,1,0,.9);
 }
+.preview-img {
+  height: 200px;
+  margin-bottom: 16px;
+  position: relative;
+}
+.preview-img .label {
+  position: absolute;
+  top: 16px;
+  right: 16px;
+  z-index: 1;
+  display: block;
+}
+.preview-img img {
+  max-height: 200px;
+}
+h2 {
+  font-size: 24px;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+}
+.item {
+  height: 500px;
+}
 /*
  * Off Canvas
  * --------------------------------------------------
