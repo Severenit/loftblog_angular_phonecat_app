@@ -30,7 +30,11 @@ $ bower install
 ```sh
 $ git clone https://github.com/Severenit/loftblog_angular_phonecat_app
 ```
-Затем установить bower:
+Переходим в папку с проектом:
+```sh
+$ cd loftblog_angular_phonecat_app
+```
+Затем устанавливаем bower:
 ```sh
 $ bower install
 ```
