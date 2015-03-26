@@ -1,0 +1,36 @@
+<div class="row row-offcanvas row-offcanvas-right">
+	<div class="col-xs-12 col-sm-8">
+		<p class="pull-right visible-xs">
+			<button type="button" class="btn btn-primary btn-xs" data-toggle="offcanvas">Toggle nav</button>
+		</p>
+		<div class="jumbotron text-center">
+			<h1>Phonecat App</h1>
+			<p>This is an example of an application written in AngularJs, especially for LoftBlog.</p>
+		</div>
+		<div class="row">
+			<div class="col-xs-12 col-sm-6 col-lg-4 item" ng-repeat="phone in phones | filter: search">
+				<div class="preview-img text-center">
+					<img ng-src="{{phone.imageUrl}}" alt="{{phone.name}}"/>
+            <span class="label"
+									ng-init="status = phone.status ? 'Есть в наличии' : 'Под заказ'"
+									ng-class="{'label-success':phone.status, 'label-warning': !phone.status}">
+              {{status}}
+            </span>
+				</div>
+				<h2>{{phone.name}}</h2>
+				<p>{{phone.snippet}}</p>
+				<p><a class="btn btn-default" href="#/phones/{{phone.id}}" role="button">View details &raquo;</a></p>
+			</div><!--/.col-sm-6.col-lg-4-->
+		</div>
+	</div><!--/.col-xs-12.col-sm-8-->
+	<div class="col-xs-6 col-sm-4 sidebar-offcanvas" id="sidebar">
+		<h3 class="text-center">Фильтр телефонов</h3>
+		<div class="list-group">
+			<div class="list-group-item text-center">
+				<form>
+					<input type="text" class="form-control" placeholder="Search..." ng-model="search">
+				</form>
+			</div>
+		</div>
+	</div><!--/.sidebar-offcanvas-->
+</div><!--/row-->
