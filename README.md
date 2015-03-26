@@ -53,5 +53,6 @@ $ git checkout -f angular-[НОМЕР УРОКА]
 ```sh
 'AngularJs - ng-src и небольшая подготовка': $ git checkout -f angular-06
 'AngularJs - $location & $route':            $ git checkout -f angular-07
+'AngularJs - Filters and Events':            $ git checkout -f angular-07
 ```
 
