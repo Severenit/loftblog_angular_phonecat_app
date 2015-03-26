@@ -86,3 +86,23 @@ h2 {
     width: 50%; /* 6 columns */
   }
 }
+.phone-images {
+  text-align: center;
+}
+.phone-images img {
+  max-width: 100%;
+}
+
+.phone-thumbs li {
+  float: left;
+  width: 30%;
+  padding:16px;
+}
+.phone-thumbs li img {
+  max-width: 100%;
+}
+.specs li {
+  display: inline-block;
+  vertical-align: top;
+  width: 30%;
+}

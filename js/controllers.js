@@ -4,10 +4,6 @@
 var phonecatApp = angular.module('phonecatApp', ['ngRoute']);
 
 phonecatApp.config(['$routeProvider', '$locationProvider', function($routeProvide, $locationProvider){
-  $locationProvider.html5Mode({
-    enabled: true,
-    requireBase: false
-  })
   $routeProvide
       .when('/',{
         templateUrl:'template/home.html',
